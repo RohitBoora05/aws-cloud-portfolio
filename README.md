@@ -15,4 +15,6 @@ A production-grade cloud portfolio built on AWS, documented week by week.
 
 ## Status
 Week 1 complete — tools installed, IAM configured, React app running.
-Week 2 completed - frontend , S3 created , deployed on web using cloudfront
+
+Week 2 completed - frontend , S3 created , deployed on web using cloudfront.
+link to the portfolio - [https://d1w8vswua3nch1.cloudfront.net]
