@@ -1,0 +1,30 @@
+{
+  "CallerReference": "rohit-portfolio-1779711932",
+  "Origins": {
+    "Quantity": 1,
+    "Items": [{
+      "Id": "S3Origin",
+      "DomainName": "rohit-cloud-portfolio-2026.s3-website.ap-south-1.amazonaws.com",
+      "CustomOriginConfig": {
+        "HTTPPort": 80,
+        "HTTPSPort": 443,
+        "OriginProtocolPolicy": "http-only"
+      }
+    }]
+  },
+  "DefaultCacheBehavior": {
+    "ViewerProtocolPolicy": "redirect-to-https",
+    "TargetOriginId": "S3Origin",
+    "ForwardedValues": {
+      "QueryString": false,
+      "Cookies": {"Forward": "none"}
+    },
+    "MinTTL": 0,
+    "DefaultTTL": 86400,
+    "MaxTTL": 31536000,
+    "Compress": true
+  },
+  "Comment": "Cloud Portfolio CDN",
+  "Enabled": true,
+  "DefaultRootObject": "index.html"
+}
