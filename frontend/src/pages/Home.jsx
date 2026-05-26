@@ -195,10 +195,10 @@ function useScrollReveal(threshold = 0.12) {
   return [ref, visible];
 }
 
-function RevealSection({ children, delay = 0 }) {
+function RevealSection({ children, delay = 0, style = {} }) {
   const [ref, visible] = useScrollReveal();
   return (
-    <div ref={ref} style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(32px)", transition: `opacity 0.7s ease ${delay}ms, transform 0.7s ease ${delay}ms` }}>
+          <div ref={ref} style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(32px)", transition: `opacity 0.7s ease ${delay}ms, transform 0.7s ease ${delay}ms`, ...style }}>
       {children}
     </div>
   );
@@ -279,7 +279,7 @@ export default function Home() {
         .tag { background: rgba(124,111,212,0.1); border: 1px solid rgba(124,111,212,0.2); color: ${ACCENT2}; font-size: 12px; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
         .proj-card { background: ${BG2}; border: 1px solid ${BORDER}; border-radius: 12px; padding: 1.5rem; transition: border-color 0.35s, transform 0.35s, box-shadow 0.35s ; display: flex; flex-direction: column; height: 100%; }
         .proj-card:hover { border-color: rgba(124,111,212,0.45); transform: translateY(-5px); box-shadow: 0 8px 32px rgba(124,111,212,0.12), 0 0 0 1px rgba(124,111,212,0.08); }
-        .what-card { background: ${BG2}; border: 1px solid ${BORDER}; border-radius: 12px; padding: 2rem; transition: border-color 0.3s, box-shadow 0.3s; }
+         .what-card { background: ${BG2}; border: 1px solid ${BORDER}; border-radius: 12px; padding: 2rem; transition: border-color 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column; }
         .what-card:hover { border-color: rgba(124,111,212,0.3); box-shadow: 0 4px 24px rgba(124,111,212,0.08); }
         .btn-primary { background: transparent; border: 1px solid rgba(124,111,212,0.4); color: ${ACCENT2}; padding: 10px 24px; border-radius: 6px; font-size: 13px; cursor: pointer; transition: all 0.25s; letter-spacing: 0.05em; text-decoration: none; display: inline-block; }
         .btn-primary:hover { background: rgba(124,111,212,0.1); border-color: ${ACCENT2}; box-shadow: 0 0 16px rgba(124,111,212,0.15); }
@@ -416,7 +416,7 @@ export default function Home() {
           <h2 className="section-title">What I do</h2>
           <div className="grid-2">
             {SKILLS_WHAT.map((s, i) => (
-              <RevealSection key={s.title} delay={i * 120}>
+                <RevealSection key={s.title} delay={i * 120} style={{ height: "100%" }}>
                 <div className="what-card">
                   <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1.25rem" }}>
                     <span style={{ fontSize: "1.5rem" }}>{s.icon}</span>
