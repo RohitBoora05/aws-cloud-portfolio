@@ -2,7 +2,7 @@ import { ACCENT, ACCENT2, BORDER, TEXT, MUTED } from "../data.js";
 
 export default function Hero({ scrollTo }) {
   return (
-    <section style={{ minHeight: "100vh", display: "flex", alignItems: "center", padding: "80px 2rem 2rem", maxWidth: "1500px", margin: "0 auto", position: "relative" }}>
+    <section style={{ minHeight: "100vh", display: "flex", alignItems: "center", padding: "80px 2rem 2rem", maxWidth: "1500px", margin: "0 auto" }}>
       <div style={{ width: "100%" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "4rem", flexWrap: "wrap" }}>
 
@@ -12,6 +12,14 @@ export default function Hero({ scrollTo }) {
             <h1 className="hero-fade-2" style={{ fontFamily: "'Syne', sans-serif", fontSize: "clamp(2.8rem, 8vw, 5rem)", fontWeight: 800, lineHeight: 1.05, letterSpacing: "-0.02em", color: TEXT, marginBottom: "0.5rem" }}>
               Rohit<br /><span style={{ color: ACCENT2 }}>Boora</span>
             </h1>
+
+            {/* Photo — mobile only, shows between name and bio */}
+            <div className="hero-photo-mobile" style={{ display: "none" }}>
+              <div style={{ width: "100%", aspectRatio: "4/5", borderRadius: "16px", overflow: "hidden", border: "1px solid rgba(124,111,212,0.4)", margin: "1.5rem 0", filter: "drop-shadow(0 0 25px rgba(124,111,212,0.7))" }}>
+                <img src="/profile.jpg" alt="Rohit Boora" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }} />
+              </div>
+            </div>
+
             <div className="hero-line hero-fade-3" />
             <p className="hero-fade-3" style={{ fontSize: "18px", color: MUTED, lineHeight: 1.7, maxWidth: "480px", marginBottom: "2rem" }}>
               I build on AWS and study AI from first principles - because engineers who understand what's inside the black box write better systems than those who don't.
@@ -26,8 +34,8 @@ export default function Hero({ scrollTo }) {
             </div>
           </div>
 
-          {/* RIGHT — Photo */}
-          <div className="hero-fade-2 hero-photo" style={{ width: "320px", height: "380px", flexShrink: 0, borderRadius: "16px", overflow: "hidden", border: "1px solid rgba(124,111,212,0.4)", filter: "drop-shadow(0 0 25px rgba(124,111,212,0.7)) drop-shadow(0 0 60px rgba(124,111,212,0.4)) drop-shadow(0 0 100px rgba(124,111,212,0.2))" }}>
+          {/* RIGHT — Photo desktop only */}
+          <div className="hero-photo" style={{ width: "320px", height: "380px", flexShrink: 0, borderRadius: "16px", overflow: "hidden", border: "1px solid rgba(124,111,212,0.4)", filter: "drop-shadow(0 0 25px rgba(124,111,212,0.7)) drop-shadow(0 0 60px rgba(124,111,212,0.4)) drop-shadow(0 0 100px rgba(124,111,212,0.2))" }}>
             <img src="/profile.jpg" alt="Rohit Boora" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }}
               onError={(e) => { e.target.style.display = "none"; e.target.nextSibling.style.display = "flex"; }}
             />
@@ -39,7 +47,6 @@ export default function Hero({ scrollTo }) {
 
         </div>
       </div>
-
     </section>
   );
 }

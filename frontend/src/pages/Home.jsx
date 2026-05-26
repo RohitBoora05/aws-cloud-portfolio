@@ -55,7 +55,8 @@ export default function Home() {
           .grid-2 { grid-template-columns: 1fr !important; }
           .connect-link { padding: 0.9rem 1rem !important; }
            section { padding-left: 1rem !important; padding-right: 1rem !important; padding-top: 3rem !important; padding-bottom: 3rem !important; }
-          .hero-photo { width: 100% !important; height: 380px !important; margin-bottom: 1.5rem; }
+           .hero-photo { display: none !important; }
+          .hero-photo-mobile { display: block !important; }
            .stack-pill { min-width: 110px !important; padding: 7px 10px !important; }
             .stack-header { padding: 0 1rem !important; }
          }
