@@ -14,7 +14,6 @@ export default function Navbar({ activeSection, scrollTo }) {
           ))}
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-          <a href="https://github.com/RohitBoora05" target="_blank" rel="noreferrer" className="btn-primary nav-github" style={{ padding: "6px 16px", fontSize: "12px" }}>GitHub</a>
           <button className="hamburger" onClick={() => setMenuOpen(m => !m)} style={{ display: "none", flexDirection: "column", gap: "5px", background: "none", border: "none", cursor: "pointer", padding: "4px" }}>
             <span style={{ width: "22px", height: "2px", background: TEXT, borderRadius: "2px", display: "block" }} />
             <span style={{ width: "22px", height: "2px", background: TEXT, borderRadius: "2px", display: "block" }} />
@@ -27,7 +26,6 @@ export default function Navbar({ activeSection, scrollTo }) {
           {NAV_LINKS.map((l) => (
             <span key={l} onClick={() => { scrollTo(l); setMenuOpen(false); }} style={{ fontSize: "1.5rem", fontFamily: "'Syne', sans-serif", fontWeight: 700, color: activeSection === l ? ACCENT2 : TEXT, cursor: "pointer", letterSpacing: "0.05em" }}>{l}</span>
           ))}
-          <a href="https://github.com/RohitBoora05" target="_blank" rel="noreferrer" style={{ fontSize: "14px", color: ACCENT2, textDecoration: "none", marginTop: "1rem" }}>{"GitHub >"}</a>
         </div>
       )}
     </>
