@@ -308,7 +308,7 @@ export default function Home() {
       {/* NAV */}
       <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, background: "rgba(10,10,15,0.88)", backdropFilter: "blur(16px)", borderBottom: `1px solid ${BORDER}`, padding: "0 1.5rem", height: "56px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <div className="nav-bar-glow" />
-        <span style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: "15px", color: TEXT }}>RB<span style={{ color: ACCENT }}>.</span></span>
+        <span style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: "20px", color: TEXT }}>RB<span style={{ color: ACCENT }}>.</span></span>
         <div className="desktop-nav" style={{ display: "flex", gap: "4px", alignItems: "center" }}>
           {NAV_LINKS.map((l) => (
             <span key={l} className={`nav-link ${activeSection === l ? "active" : ""}`} onClick={() => scrollTo(l)}>{l}</span>
