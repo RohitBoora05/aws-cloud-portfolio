@@ -52,7 +52,7 @@ export default function Home() {
           .proj-card { padding: 1.25rem !important; }
           .grid-2 { grid-template-columns: 1fr !important; }
           .connect-link { padding: 0.9rem 1rem !important; }
-          section { padding-left: 1rem !important; padding-right: 1rem !important; }
+           section { padding-left: 1rem !important; padding-right: 1rem !important; padding-top: 3rem !important; padding-bottom: 3rem !important; }
           .hero-photo { width: 100% !important; height: 380px !important; margin-bottom: 1.5rem; }
            .stack-pill { min-width: 110px !important; padding: 7px 10px !important; }
             .stack-header { padding: 0 1rem !important; }
@@ -69,6 +69,7 @@ export default function Home() {
         .hero-line { height: 1px; background: linear-gradient(90deg, ${ACCENT}, transparent); margin: 1.5rem 0; }
         .section-label { font-size: 12px; letter-spacing: 0.15em; color: ${ACCENT}; text-transform: uppercase; margin-bottom: 0.5rem; font-family: 'Syne', sans-serif; }
         .section-title { font-family: 'Syne', sans-serif; font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 700; color: ${TEXT}; margin-bottom: 3rem; }
+        section { padding-top: 3.5rem !important; padding-bottom: 3.5rem !important; }
         .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
         .about-text { font-size: 18px; line-height: 1.9; color: #B0B0C8; }
         .about-text em { color: ${TEXT}; font-style: normal; font-weight: 500; }
