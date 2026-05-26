@@ -277,7 +277,7 @@ export default function Home() {
         .nav-link.active { color: ${ACCENT2}; background: rgba(124,111,212,0.12); box-shadow: 0 0 10px rgba(124,111,212,0.25), 0 0 20px rgba(124,111,212,0.1), inset 0 0 8px rgba(124,111,212,0.08); }
 
         .tag { background: rgba(124,111,212,0.1); border: 1px solid rgba(124,111,212,0.2); color: ${ACCENT2}; font-size: 11px; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
-        .proj-card { background: ${BG2}; border: 1px solid ${BORDER}; border-radius: 12px; padding: 1.5rem; transition: border-color 0.35s, transform 0.35s, box-shadow 0.35s; }
+        .proj-card { background: ${BG2}; border: 1px solid ${BORDER}; border-radius: 12px; padding: 1.5rem; transition: border-color 0.35s, transform 0.35s, box-shadow 0.35s ; display: flex; flex-direction: column; height: 100%; }
         .proj-card:hover { border-color: rgba(124,111,212,0.45); transform: translateY(-5px); box-shadow: 0 8px 32px rgba(124,111,212,0.12), 0 0 0 1px rgba(124,111,212,0.08); }
         .what-card { background: ${BG2}; border: 1px solid ${BORDER}; border-radius: 12px; padding: 2rem; transition: border-color 0.3s, box-shadow 0.3s; }
         .what-card:hover { border-color: rgba(124,111,212,0.3); box-shadow: 0 4px 24px rgba(124,111,212,0.08); }
@@ -524,7 +524,7 @@ export default function Home() {
                   <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginBottom: "1.25rem" }}>
                     {p.tags.map((t) => <span key={t} className="tag">{t}</span>)}
                   </div>
-                  <a href={p.link} target="_blank" rel="noreferrer" style={{ fontSize: "12px", color: ACCENT2, textDecoration: "none", letterSpacing: "0.03em" }}>{"View on GitHub >"}</a>
+                  <a href={p.link} target="_blank" rel="noreferrer" style={{ fontSize: "12px", color: ACCENT2, textDecoration: "none", letterSpacing: "0.03em" ,marginTop: "auto", paddingTop: "1rem", display: "block" }}>{"View on GitHub >"}</a>
                 </div>
               </RevealSection>
             ))}
