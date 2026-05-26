@@ -7,7 +7,7 @@ const BG2 = "#0F0F1A";
 const BG3 = "#13131F";
 const BORDER = "rgba(124,111,212,0.15)";
 const TEXT = "#E8E8F0";
-const MUTED = "#6B6B8A";
+const MUTED = "#8888A8";
 
 const NAV_LINKS = ["About", "What I Do", "Experience", "Projects", "Stack", "Connect"];
 
@@ -424,7 +424,7 @@ export default function Home() {
                   </div>
                   <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.6rem" }}>
                     {s.points.map((p) => (
-                      <li key={p} style={{ display: "flex", gap: "0.6rem", fontSize: "15px", color: "#9090B0", lineHeight: 1.5 }}>
+                      <li key={p} style={{ display: "flex", gap: "0.6rem", fontSize: "15px", color: "#A0A0C0", lineHeight: 1.5 }}>
                         <span style={{ color: ACCENT, marginTop: "2px", flexShrink: 0 }}>{"›"}</span>{p}
                       </li>
                     ))}
@@ -494,7 +494,7 @@ export default function Home() {
             ].map((item) => (
               <div key={item} style={{ display: "flex", gap: "0.5rem", alignItems: "flex-start" }}>
                 <span style={{ color: ACCENT2, fontSize: "12px", marginTop: "1px", flexShrink: 0 }}>{"›"}</span>
-                <span style={{ fontSize: "12px", color: "#9090B0", lineHeight: 1.5 }}>{item}</span>
+                <span style={{ fontSize: "12px", color: "#A0A0C0", lineHeight: 1.5 }}>{item}</span>
               </div>
             ))}
           </div>
