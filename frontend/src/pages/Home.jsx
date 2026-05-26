@@ -214,9 +214,9 @@ function TimelineItem({ item, index }) {
         <div style={{ width: "1px", flex: 1, background: `linear-gradient(to bottom, ${ACCENT}60, ${ACCENT}10)`, marginTop: "4px", minHeight: "40px" }} />
       </div>
       <div style={{ paddingBottom: "2rem", flex: 1, minWidth: 0 }}>
-        <span style={{ fontSize: "11px", color: ACCENT, fontFamily: "monospace", letterSpacing: "0.04em", display: "block", marginBottom: "0.3rem" }}>{item.period}</span>
+        <span style={{ fontSize: "12px", color: ACCENT, fontFamily: "monospace", letterSpacing: "0.04em", display: "block", marginBottom: "0.3rem" }}>{item.period}</span>
         <h4 style={{ fontFamily: "'Syne', sans-serif", fontSize: "14px", fontWeight: 700, color: TEXT, marginBottom: "0.4rem", wordBreak: "break-word" }}>{item.title}</h4>
-        <p style={{ fontSize: "13px", color: MUTED, lineHeight: 1.7, wordBreak: "break-word" }}>{item.desc}</p>
+        <p style={{ fontSize: "14px", color: MUTED, lineHeight: 1.7, wordBreak: "break-word" }}>{item.desc}</p>
       </div>
     </div>
   );
@@ -276,7 +276,7 @@ export default function Home() {
         .nav-link:hover { color: ${TEXT}; background: rgba(124,111,212,0.08); }
         .nav-link.active { color: ${ACCENT2}; background: rgba(124,111,212,0.12); box-shadow: 0 0 10px rgba(124,111,212,0.25), 0 0 20px rgba(124,111,212,0.1), inset 0 0 8px rgba(124,111,212,0.08); }
 
-        .tag { background: rgba(124,111,212,0.1); border: 1px solid rgba(124,111,212,0.2); color: ${ACCENT2}; font-size: 11px; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+        .tag { background: rgba(124,111,212,0.1); border: 1px solid rgba(124,111,212,0.2); color: ${ACCENT2}; font-size: 12px; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
         .proj-card { background: ${BG2}; border: 1px solid ${BORDER}; border-radius: 12px; padding: 1.5rem; transition: border-color 0.35s, transform 0.35s, box-shadow 0.35s ; display: flex; flex-direction: column; height: 100%; }
         .proj-card:hover { border-color: rgba(124,111,212,0.45); transform: translateY(-5px); box-shadow: 0 8px 32px rgba(124,111,212,0.12), 0 0 0 1px rgba(124,111,212,0.08); }
         .what-card { background: ${BG2}; border: 1px solid ${BORDER}; border-radius: 12px; padding: 2rem; transition: border-color 0.3s, box-shadow 0.3s; }
@@ -284,7 +284,7 @@ export default function Home() {
         .btn-primary { background: transparent; border: 1px solid rgba(124,111,212,0.4); color: ${ACCENT2}; padding: 10px 24px; border-radius: 6px; font-size: 13px; cursor: pointer; transition: all 0.25s; letter-spacing: 0.05em; text-decoration: none; display: inline-block; }
         .btn-primary:hover { background: rgba(124,111,212,0.1); border-color: ${ACCENT2}; box-shadow: 0 0 16px rgba(124,111,212,0.15); }
         .hero-line { height: 1px; background: linear-gradient(90deg, ${ACCENT}, transparent); margin: 1.5rem 0; }
-        .section-label { font-size: 11px; letter-spacing: 0.15em; color: ${ACCENT}; text-transform: uppercase; margin-bottom: 0.5rem; font-family: 'Syne', sans-serif; }
+        .section-label { font-size: 12px; letter-spacing: 0.15em; color: ${ACCENT}; text-transform: uppercase; margin-bottom: 0.5rem; font-family: 'Syne', sans-serif; }
         .section-title { font-family: 'Syne', sans-serif; font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 700; color: ${TEXT}; margin-bottom: 3rem; }
         .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
         .about-text { font-size: 15px; line-height: 1.9; color: #B0B0C8; }
@@ -293,7 +293,7 @@ export default function Home() {
         .hero-fade-2 { animation: fadeUp 0.9s ease 0.15s forwards; opacity: 0; }
         .hero-fade-3 { animation: fadeUp 0.9s ease 0.3s forwards; opacity: 0; }
         .hero-fade-4 { animation: fadeUp 0.9s ease 0.45s forwards; opacity: 0; }
-        .status-badge { font-size: 10px; padding: 2px 8px; border-radius: 20px; }
+        .status-badge { font-size: 11px; padding: 2px 8px; border-radius: 20px; }
         .status-complete { background: rgba(52,211,153,0.1); color: #34D399; border: 1px solid rgba(52,211,153,0.2); }
         .status-progress { background: rgba(251,191,36,0.1); color: #FBBF24; border: 1px solid rgba(251,191,36,0.2); }
         .status-soon { background: rgba(124,111,212,0.1); color: ${ACCENT2}; border: 1px solid rgba(124,111,212,0.2); }
@@ -456,7 +456,7 @@ export default function Home() {
 
         {/* Status */}
         <div style={{ background: BG2, border: `1px solid ${BORDER}`, borderRadius: "12px", padding: "1.5rem", marginBottom: "1rem" }}>
-          <p style={{ fontSize: "10px", letterSpacing: "0.12em", color: ACCENT, textTransform: "uppercase", fontFamily: "'Syne', sans-serif", marginBottom: "1rem" }}>Current Status</p>
+          <p style={{ fontSize: "11px", letterSpacing: "0.12em", color: ACCENT, textTransform: "uppercase", fontFamily: "'Syne', sans-serif", marginBottom: "1rem" }}>Current Status</p>
           <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "0.75rem" }}>
             <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#34D399", boxShadow: "0 0 8px #34D39980", flexShrink: 0 }} />
             <span style={{ fontSize: "13px", color: TEXT, fontWeight: 500 }}>Open to opportunities</span>
@@ -544,7 +544,7 @@ export default function Home() {
     {STACK_ROWS.map((row, i) => (
       <RevealSection key={row.label} delay={i * 80}>
         <div style={{ padding: "0 4rem", maxWidth: "1500px", margin: "0 auto", marginBottom: "0.4rem" }}>
-          <span style={{ fontSize: "10px", letterSpacing: "0.12em", color: row.color, textTransform: "uppercase", fontFamily: "'Syne', sans-serif" }}>{row.label}</span>
+          <span style={{ fontSize: "11px", letterSpacing: "0.12em", color: row.color, textTransform: "uppercase", fontFamily: "'Syne', sans-serif" }}>{row.label}</span>
         </div>
         <div className="row-pause">
           <InfiniteRow items={row.items} speed={20 + i * 8} reverse={i % 2 !== 0} />
@@ -608,7 +608,7 @@ export default function Home() {
             <svg viewBox="0 0 24 24" width="18" height="18" fill={TEXT}><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48v-1.69c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
           </span>
           <div>
-            <p style={{ fontSize: "13px", fontWeight: 500, color: TEXT, marginBottom: "2px" }}>GitHub</p>
+            <p style={{ fontSize: "14px", fontWeight: 500, color: TEXT, marginBottom: "2px" }}>GitHub</p>
             <p style={{ fontSize: "12px", color: MUTED }}>github.com/RohitBoora05</p>
           </div>
         <span style={{ marginLeft: "auto", color: MUTED, fontSize: "16px" }}>{">"}</span>
@@ -619,7 +619,7 @@ export default function Home() {
             <svg viewBox="0 0 24 24" width="18" height="18" fill="#0A66C2"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
           </span>
           <div>
-            <p style={{ fontSize: "13px", fontWeight: 500, color: TEXT, marginBottom: "2px" }}>LinkedIn</p>
+            <p style={{ fontSize: "14px", fontWeight: 500, color: TEXT, marginBottom: "2px" }}>LinkedIn</p>
             <p style={{ fontSize: "12px", color: MUTED }}>linkedin.com/in/rohtiboora-ai</p>
           </div>
         <span style={{ marginLeft: "auto", color: MUTED, fontSize: "16px" }}>{">"}</span>
@@ -630,7 +630,7 @@ export default function Home() {
             <svg viewBox="0 0 24 24" width="18" height="18" fill="#EA4335"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           </span>
           <div>
-            <p style={{ fontSize: "13px", fontWeight: 500, color: TEXT, marginBottom: "2px" }}>Email</p>
+            <p style={{ fontSize: "14px", fontWeight: 500, color: TEXT, marginBottom: "2px" }}>Email</p>
             <p style={{ fontSize: "12px", color: MUTED }}>rohitboora2005@gmail.com</p>
           </div>
         <span style={{ marginLeft: "auto", color: MUTED, fontSize: "16px" }}>{">"}</span>
@@ -644,7 +644,7 @@ export default function Home() {
 
 {/* FOOTER */}
 <footer style={{ borderTop: `1px solid ${BORDER}`, padding: "2rem", textAlign: "center" }}>
-  <p style={{ fontSize: "12px", color: MUTED }}>Rohit Boora - Built with React + AWS - 2026</p>
+  <p style={{ fontSize: "13px", color: MUTED }}>Rohit Boora - Built with React + AWS - 2026</p>
 </footer>
     </div>
   );
