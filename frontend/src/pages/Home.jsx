@@ -579,7 +579,7 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Resume download 
+        {/* Resume download */} 
            <a        
           href="/resume.pdf"
           download
@@ -602,7 +602,7 @@ export default function Home() {
 </svg>
 
           Download Resume
-        </a> */}
+        </a> 
       </div>
 
       {/* RIGHT — Social links */}
