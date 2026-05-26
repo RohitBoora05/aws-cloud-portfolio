@@ -25,6 +25,8 @@ export default function Home() {
   }, []);
 
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+   const [showTop, setShowTop] = useState(false);
+  useEffect(() => { const onScroll = () => setShowTop(window.scrollY > 300); window.addEventListener("scroll", onScroll); return () => window.removeEventListener("scroll", onScroll); }, []);
 
   return (
     <div style={{ background: BG, color: TEXT, fontFamily: "'DM Sans', 'Segoe UI', sans-serif", minHeight: "100vh", overflowX: "hidden" }}>
@@ -98,6 +100,9 @@ export default function Home() {
       <Projects sectionsRef={sectionsRef} />
       <Stack sectionsRef={sectionsRef} />
       <Connect sectionsRef={sectionsRef} />
+     {showTop && (
+        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} style={{ position: "fixed", bottom: "2rem", right: "2rem", zIndex: 99, width: "44px", height: "44px", borderRadius: "50%", background: `rgba(124,111,212,0.15)`, border: `1px solid ${ACCENT}`, color: ACCENT2, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px", backdropFilter: "blur(8px)", transition: "all 0.25s" }}>↑</button>
+      )}
     </div>
   );
 }
