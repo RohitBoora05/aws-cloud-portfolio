@@ -41,9 +41,9 @@ const EXPERIENCE = [
   { period: "Q3 2025", title: "SIH Hackathon Preparation: Stream Selector", desc: "Developed an AI-based academic stream recommendation system during SIH preparation round. Processed student response data to classify suitable career streams." },
   { period: "Q1 2026 (Feb)", title: "Internship: ShadowFox | Python Development", desc: "Delivered Hangman game, a BeautifulSoup web scraper, and an advanced NLP analysis project. First production-level Python work in a structured environment." },
   { period: "Q1 2026", title: "BERT Architecture Analysis", desc: "Independent deep dive into transformer internals — analysed encoder layers, multi-head attention mechanisms, and token embeddings using HuggingFace. Fully documented on GitHub." },
-  { period: "Q1 2026", title: "AWS Workshop: Cloud Foundations", desc: "Hands-on provisioning of core AWS services — S3, EC2, RDS, IAM, Elastic Load Balancer, CloudWatch, VPC. First structured exposure to cloud infrastructure management." },
+  { period: "Q1 2026 (Mar)", title: "AWS Workshop: Cloud Foundations", desc: "Hands-on provisioning of core AWS services — S3, EC2, RDS, IAM, Elastic Load Balancer, CloudWatch, VPC. First structured exposure to cloud infrastructure management." },
   { period: "Q2 2026", title: "Mechanistic Interpretability", desc: "Encountered the MI review paper while researching model internals. Pivoted toward AI safety and interpretability research as a long-term focus area." },
-  { period: "Q2 2026", title: "AWS Portfolio + Certification Track", desc: "Building production-grade cloud infrastructure — S3, CloudFront, Lambda, DynamoDB, EC2, Terraform, Docker. Actively preparing for AWS Cloud Practitioner certification." },
+  { period: "Q2 2026(May)", title: "AWS Portfolio + Certification Track", desc: "Building production-grade cloud infrastructure — S3, CloudFront, Lambda, DynamoDB, EC2, Terraform, Docker. Actively preparing for AWS Cloud Practitioner certification." },
 ];
 
 const PROJECTS = [
