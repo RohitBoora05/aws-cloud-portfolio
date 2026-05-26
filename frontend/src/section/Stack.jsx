@@ -5,7 +5,7 @@ import InfiniteRow from "../components/InfiniteRow.jsx";
 export default function Stack({ sectionsRef }) {
   return (
     <section id="Stack" data-section="Stack" ref={(el) => (sectionsRef.current["Stack"] = el)} style={{ padding: "5rem 0", overflow: "hidden" }}>
-      <div style={{ maxWidth: "1500px", margin: "0 auto", padding: "0 4rem" }}>
+       <div className="stack-header" style={{ maxWidth: "1500px", margin: "0 auto", padding: "0 4rem" }}>
         <RevealSection>
           <p className="section-label">Technologies</p>
           <h2 className="section-title">Tech stack</h2>

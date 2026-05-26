@@ -54,7 +54,9 @@ export default function Home() {
           .connect-link { padding: 0.9rem 1rem !important; }
           section { padding-left: 1rem !important; padding-right: 1rem !important; }
           .hero-photo { width: 100% !important; height: 380px !important; margin-bottom: 1.5rem; }
-        }
+           .stack-pill { min-width: 110px !important; padding: 7px 10px !important; }
+            .stack-header { padding: 0 1rem !important; }
+         }
         .nav-link:hover { color: ${TEXT}; background: rgba(124,111,212,0.08); }
         .nav-link.active { color: ${ACCENT2}; background: rgba(124,111,212,0.12); box-shadow: 0 0 10px rgba(124,111,212,0.25), 0 0 20px rgba(124,111,212,0.1), inset 0 0 8px rgba(124,111,212,0.08); }
         .tag { background: rgba(124,111,212,0.1); border: 1px solid rgba(124,111,212,0.2); color: ${ACCENT2}; font-size: 12px; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }

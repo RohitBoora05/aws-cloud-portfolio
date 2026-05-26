@@ -13,13 +13,12 @@ export default function InfiniteRow({ items, speed = 30, reverse = false }) {
         width: "max-content",
       }}>
         {doubled.map((item, i) => (
-          <div key={i} style={{
+          <div key={i} className="stack-pill" style={{
             display: "flex", alignItems: "center", gap: "10px",
             background: BG2, border: `1px solid ${BORDER}`,
             borderRadius: "10px", padding: "10px 16px",
             flexShrink: 0, transition: "border-color 0.2s, box-shadow 0.2s",
-            cursor: "default",
-            minWidth: "140px",
+            cursor: "default", minWidth: "140px",
           }}
             onMouseEnter={e => { e.currentTarget.style.borderColor = item.color + "60"; e.currentTarget.style.boxShadow = `0 0 16px ${item.color}18`; }}
             onMouseLeave={e => { e.currentTarget.style.borderColor = BORDER; e.currentTarget.style.boxShadow = "none"; }}
