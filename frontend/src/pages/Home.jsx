@@ -225,6 +225,8 @@ function TimelineItem({ item, index }) {
 export default function Home() {
   const [activeSection, setActiveSection] = useState("About");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  useEffect(() => { const onScroll = () => { const el = document.documentElement; setScrollProgress(el.scrollTop / (el.scrollHeight - el.clientHeight) * 100); }; window.addEventListener("scroll", onScroll); return () => window.removeEventListener("scroll", onScroll); }, []);
   const sectionsRef = useRef({});
 
   useEffect(() => {
@@ -308,6 +310,7 @@ export default function Home() {
       {/* NAV */}
       <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, background: "rgba(10,10,15,0.88)", backdropFilter: "blur(16px)", borderBottom: `1px solid ${BORDER}`, padding: "0 1.5rem", height: "56px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <div className="nav-bar-glow" />
+         <div style={{ position: "absolute", top: 0, left: 0, height: "2px", width: `${scrollProgress}%`, background: `linear-gradient(90deg, ${ACCENT}, ${ACCENT2})`, transition: "width 0.1s linear", zIndex: 101 }} />
         <span style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: "20px", color: TEXT }}>RB<span style={{ color: ACCENT }}>.</span></span>
         <div className="desktop-nav" style={{ display: "flex", gap: "4px", alignItems: "center" }}>
           {NAV_LINKS.map((l) => (
