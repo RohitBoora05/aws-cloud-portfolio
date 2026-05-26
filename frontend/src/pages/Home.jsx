@@ -299,6 +299,8 @@ export default function Home() {
         .status-soon { background: rgba(124,111,212,0.1); color: ${ACCENT2}; border: 1px solid rgba(124,111,212,0.2); }
         .connect-link { display: flex; align-items: center; gap: 1rem; padding: 1.1rem 1.5rem; background: ${BG2}; border: 1px solid ${BORDER}; border-radius: 10px; text-decoration: none; color: ${TEXT}; transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s; }
         .connect-link:hover { border-color: rgba(124,111,212,0.45); transform: translateY(-3px); box-shadow: 0 6px 24px rgba(124,111,212,0.1); }
+        .exp-layout { flex-direction: column !important; gap: 2rem !important; }
+        .exp-sidebar { width: 100% !important; position: static !important; }
         .nav-bar-glow { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60%; height: 1px; background: linear-gradient(90deg, transparent, rgba(124,111,212,0.4), transparent); pointer-events: none; }
         .row-pause:hover div { animation-play-state: paused !important; }
       `}</style>
@@ -434,16 +436,75 @@ export default function Home() {
         </RevealSection>
       </section>
 
-      {/* EXPERIENCE */}
-      <section id="Experience" data-section="Experience" ref={(el) => (sectionsRef.current["Experience"] = el)} style={{ padding: "5rem 4rem", maxWidth: "1500px", margin: "0 auto" }}>
-        <RevealSection>
-          <p className="section-label">Journey</p>
-          <h2 className="section-title">My career & experience</h2>
-        </RevealSection>
-        <div style={{ maxWidth: "720px" }}>
-          {EXPERIENCE.map((e, i) => <TimelineItem key={e.title} item={e} index={i} />)}
+{/* EXPERIENCE */}
+<section id="Experience" data-section="Experience" ref={(el) => (sectionsRef.current["Experience"] = el)} style={{ padding: "5rem 4rem", maxWidth: "1500px", margin: "0 auto" }}>
+  <RevealSection>
+    <p className="section-label">Journey</p>
+    <h2 className="section-title">My career {"&"} experience</h2>
+  </RevealSection>
+
+  <div className="exp-layout" style={{ display: "flex", gap: "4rem", alignItems: "flex-start" }}>
+
+    {/* LEFT — Timeline */}
+    <div style={{ flex: 1, minWidth: 0 }}>
+      {EXPERIENCE.map((e, i) => <TimelineItem key={e.title} item={e} index={i} />)}
+    </div>
+
+    {/* RIGHT — Sticky summary card */}
+    <div className="exp-sidebar" style={{ width: "	300px", flexShrink: 0, position: "sticky", top: "80px" }}>
+      <RevealSection delay={200}>
+
+        {/* Status */}
+        <div style={{ background: BG2, border: `1px solid ${BORDER}`, borderRadius: "12px", padding: "1.5rem", marginBottom: "1rem" }}>
+          <p style={{ fontSize: "10px", letterSpacing: "0.12em", color: ACCENT, textTransform: "uppercase", fontFamily: "'Syne', sans-serif", marginBottom: "1rem" }}>Current Status</p>
+          <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "0.75rem" }}>
+            <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#34D399", boxShadow: "0 0 8px #34D39980", flexShrink: 0 }} />
+            <span style={{ fontSize: "13px", color: TEXT, fontWeight: 500 }}>Open to opportunities</span>
+          </div>
+          <p style={{ fontSize: "12px", color: MUTED, lineHeight: 1.6 }}>3rd year BTech — AI {"&"} Data Science. Actively building, learning, and exploring research directions.</p>
         </div>
-      </section>
+
+        {/* Quick stats */}
+        <div style={{ background: BG2, border: `1px solid ${BORDER}`, borderRadius: "12px", padding: "1.5rem", marginBottom: "1rem" }}>
+          <p style={{ fontSize: "10px", letterSpacing: "0.12em", color: ACCENT, textTransform: "uppercase", fontFamily: "'Syne', sans-serif", marginBottom: "1rem" }}>Quick Stats</p>
+          <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+            {[
+              { label: "Projects shipped", value: "4+" },
+              { label: "Internships", value: "1" },
+              { label: "AWS services used", value: "15+" },
+              { label: "Hackathons", value: "SIH 2025" },
+            ].map((stat) => (
+              <div key={stat.label} style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <span style={{ fontSize: "12px", color: MUTED }}>{stat.label}</span>
+                <span style={{ fontSize: "13px", color: TEXT, fontWeight: 600, fontFamily: "monospace" }}>{stat.value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Currently exploring */}
+        <div style={{ background: BG2, border: `1px solid ${BORDER}`, borderRadius: "12px", padding: "1.5rem" }}>
+          <p style={{ fontSize: "10px", letterSpacing: "0.12em", color: ACCENT, textTransform: "uppercase", fontFamily: "'Syne', sans-serif", marginBottom: "1rem" }}>Now Exploring</p>
+          <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
+            {[
+              "Mechanistic Interpretability",
+              "AWS Cloud Practitioner",
+              "Transformer Internals",
+              "MLOps on AWS",
+            ].map((item) => (
+              <div key={item} style={{ display: "flex", gap: "0.5rem", alignItems: "flex-start" }}>
+                <span style={{ color: ACCENT2, fontSize: "12px", marginTop: "1px", flexShrink: 0 }}>{"›"}</span>
+                <span style={{ fontSize: "12px", color: "#9090B0", lineHeight: 1.5 }}>{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </RevealSection>
+    </div>
+
+  </div>
+</section> 
 
       {/* PROJECTS */}
       <section id="Projects" data-section="Projects" ref={(el) => (sectionsRef.current["Projects"] = el)} style={{ padding: "5rem 4rem", maxWidth: "1500px", margin: "0 auto" }}>
@@ -471,28 +532,27 @@ export default function Home() {
         </RevealSection>
       </section>
 
-      {/* TECH STACK — infinite carousel rows */}
-      <section id="Stack" data-section="Stack" ref={(el) => (sectionsRef.current["Stack"] = el)} style={{ padding: "5rem 0", overflow: "hidden" }}>
-        <div style={{ maxWidth: "1500px", margin: "0 auto", padding: "0 4rem" }}>
-          <RevealSection>
-            <p className="section-label">Technologies</p>
-            <h2 className="section-title">Tech stack</h2>
-          </RevealSection>
+{/* TECH STACK — infinite carousel rows */}
+<section id="Stack" data-section="Stack" ref={(el) => (sectionsRef.current["Stack"] = el)} style={{ padding: "5rem 0", overflow: "hidden" }}>
+  <div style={{ maxWidth: "1500px", margin: "0 auto", padding: "0 4rem" }}>
+    <RevealSection>
+      <p className="section-label">Technologies</p>
+      <h2 className="section-title">Tech stack</h2>
+    </RevealSection>
+  </div>
+  <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+    {STACK_ROWS.map((row, i) => (
+      <RevealSection key={row.label} delay={i * 80}>
+        <div style={{ padding: "0 4rem", maxWidth: "1500px", margin: "0 auto", marginBottom: "0.4rem" }}>
+          <span style={{ fontSize: "10px", letterSpacing: "0.12em", color: row.color, textTransform: "uppercase", fontFamily: "'Syne', sans-serif" }}>{row.label}</span>
         </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
-          {STACK_ROWS.map((row, i) => (
-            <RevealSection key={row.label} delay={i * 80}>
-              <div style={{ marginBottom: "0.25rem", padding: "0 4rem", maxWidth: "1500px", margin: "0 auto 0.4rem" }}>
-                <span style={{ fontSize: "10px", letterSpacing: "0.12em", color: row.color, textTransform: "uppercase", fontFamily: "'Syne', sans-serif" }}>{row.label}</span>
-              </div>
-              <div className="row-pause">
-                <InfiniteRow items={row.items} speed={20 + i * 8} reverse={i % 2 !== 0} />
-              </div>
-            </RevealSection>
-          ))}
+        <div className="row-pause">
+          <InfiniteRow items={row.items} speed={20 + i * 8} reverse={i % 2 !== 0} />
         </div>
-      </section>
-
+      </RevealSection>
+    ))}
+  </div>
+</section>
 
 {/* CONNECT */}
 <section id="Connect" data-section="Connect" ref={(el) => (sectionsRef.current["Connect"] = el)} style={{ padding: "5rem 2rem 8rem", maxWidth: "1500px", margin: "0 auto" }}>
